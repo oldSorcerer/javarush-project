@@ -8,6 +8,9 @@ cd ~/task1
 touch testfile.txt
 
 # Добавляем текст "Hello, Linux World!" в файл с помощью редактора nano
+nano testfile.txt
 
 # Выводим содержимое файла testfile.txt на экран
 cat testfile.txt
+
+#sleep 10
