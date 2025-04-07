@@ -5,7 +5,7 @@ sudo groupadd testgroup
 sudo usermod -aG testgroup $(whoami)
 
 # Проверка обновленного списка групп для текущего пользователя
-sudo groups $(whoami)
+sudo groups
 
 # Подтверждение принадлежности к новой группе
-sudo id $(whoami)
+sudo id
