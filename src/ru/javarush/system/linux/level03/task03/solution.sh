@@ -1,8 +1,8 @@
 # Перезапуск службы cron
-
+sudo systemctl restart cron
 
 # Проверка статуса службы cron, чтобы убедиться, что она активна
-
+sudo systemctl status cron
 
 # Остановка службы cron
 
