@@ -5,9 +5,10 @@ sudo systemctl restart cron
 sudo systemctl status cron
 
 # Остановка службы cron
-
+sudo systemctl stop cron
 
 # Проверка всех завершённых с ошибкой служб
-
+sudo systemctl --failed
 
 # Проверка состояния остановленной службы cron
+sudo systemctl status cron
