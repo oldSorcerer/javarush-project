@@ -12,6 +12,7 @@ sudo systemctl restart nginx
 sudo systemctl status nginx
 
 # Отключение автозапуска службы nginx
-
+sudo systemctl disable nginx
 
 # Проверка, что автозапуск службы nginx отключён
+sudo systemctl is-enabled nginx
