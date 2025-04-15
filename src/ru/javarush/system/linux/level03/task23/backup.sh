@@ -7,7 +7,7 @@ CURRENT_DATE=$(date +%F)
 ARCHIVE_NAME="backup_${CURRENT_DATE}.tar.gz"
 
 # Создаём архив из каталога /tmp/my_data и сохраняем его в /tmp/backups
-???
+tar -czf "/tmp/backups/${ARCHIVE_NAME}" -C /temp/my_data
 
 # Уведомляем пользователя о завершении
 echo "Резервное копирование завершено. Архив: /tmp/backups/${ARCHIVE_NAME}"
