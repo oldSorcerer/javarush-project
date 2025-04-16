@@ -9,5 +9,5 @@ threshold=1.0
 # Сравнение нагрузки с порогом
 if (( $(echo "$cpu_load > $threshold" | bc -l) )); then
     # Если нагрузка выше порога, записать сообщение в лог-файл
-    ???
+    echo "High CPU load: $cpu_load" >> ~/cpu_alert.log
 fi
