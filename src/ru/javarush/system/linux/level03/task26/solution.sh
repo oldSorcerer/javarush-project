@@ -21,3 +21,10 @@ ping -c 1 "$URL" > /dev/null 2>&1
 CURRENT_TIME=$(date "+%a %b %d %T %Z %Y")
 
 # Проверяем результат выполнения команды ping
+if [ $? -eq 0 ]; then
+  # Сайт доступен
+  echo "$CURRENT_TIME: Сайт доступен" >> "$LOG_FILE"
+else
+  # Сайт недоступен
+  echo "$CURRENT_TIME: Сайт недоступен" >> "$LOG_FILE"
+fi
