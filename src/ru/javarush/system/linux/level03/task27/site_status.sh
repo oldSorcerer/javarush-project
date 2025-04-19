@@ -12,7 +12,7 @@ else
 fi
 
 # Формируем строку с датой, временем и результатом проверки
-LOG_ENTRY=" ??? "
+LOG_ENTRY="$(date '+%Y-%m-%d %H:%M:%S') - Сайт $URL $STATUS"
 
 # Записываем строку в лог файл
 echo "$LOG_ENTRY" >> site_check.log
