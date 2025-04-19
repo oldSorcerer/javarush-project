@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Получение списка сетевых интерфейсов
-INTERFACES= ???
+INTERFACES=$(ip -o link show | awk -F': ' '{print $2}')
 
 # Флаг для проверки наличия активных интерфейсов
 FOUND_ACTIVE=false
