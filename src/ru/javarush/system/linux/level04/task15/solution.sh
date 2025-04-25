@@ -7,7 +7,7 @@ REMOTE_HOST="192.168.1.1"    # Замените '192.168.1.1' на IP-адрес
 # 1. Генерация SSH-ключей на локальной машине
 if [ ! -f ~/.ssh/id_rsa ]; then
     echo "Генерация SSH-ключей..."
-    ???
+    ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N "" -q
     echo "SSH-ключи созданы."
 else
     echo "SSH-ключи уже существуют, пропускаем генерацию."
@@ -21,3 +21,9 @@ cat ~/.ssh/id_rsa.pub | ssh $REMOTE_USER@$REMOTE_HOST "cat >> ~/.ssh/authorized_
 
 # 4. Подключение к серверу для проверки
 ssh -o PasswordAuthentication=no $REMOTE_USER@$REMOTE_HOST "echo 'Подключение без пароля успешно!'"
+
+# -t - тип соединения
+# -b - длина ключа
+# -f - имя файла
+# -N - пароль
+# -q - тихий режим вывода в консоль
