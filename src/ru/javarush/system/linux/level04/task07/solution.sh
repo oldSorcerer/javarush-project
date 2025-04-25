@@ -17,8 +17,8 @@ if [[ -n "$first_established" ]]; then
   
   # Выводим результаты анализа.
   echo "Первое установленное соединение:"
-  ???
-  ???
+  echo "Локальный адрес: $local_address"
+  echo "Удалённый адрес: $remote_address"
 else
   echo "Соединений в состоянии ESTABLISHED не найдено."
 fi
