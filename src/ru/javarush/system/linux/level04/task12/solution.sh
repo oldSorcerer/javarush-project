@@ -2,7 +2,7 @@
 
 # Получение AAAA-записей домена amazon.com с использованием команды dig
 # Используем команду dig с опцией +short, чтобы получить только записи IPv6 (AAAA)
-ipv6_addresses=$( ??? )
+ipv6_addresses=$(dig amazon.com AAAA +short)
 
 # Проверка, есть ли найденные записи
 if [ -z "$ipv6_addresses" ]; then
