@@ -16,10 +16,10 @@ fi
 # Добавление конфигурации для локального сервера
 echo "Настройка конфигурации SSH..."
 {
-  echo "Host $???"
-  echo "    HostName $???"
-  echo "    User $???"
-  echo "    IdentityFile $???"
+  echo "Host $HOST_ALIAS"
+  echo "    HostName $HOST_NAME"
+  echo "    User $USER_NAME"
+  echo "    IdentityFile $KEY_PATH"
 } >> "$CONFIG_FILE"
 
 # Подключение к серверу с использованием нового имени хоста
