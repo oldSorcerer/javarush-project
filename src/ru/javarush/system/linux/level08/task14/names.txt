@@ -4,4 +4,4 @@ Alice
 Bob
 Charlie
 Alice
-Charlie  
+Charlie
