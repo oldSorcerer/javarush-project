@@ -14,7 +14,7 @@ sudo sed -i 's/^#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh
 sudo sed -i 's/^PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
 
 # Перезапуск SSH-сервера
-???
+sudo systemctl restart ssh
 
 # Проверка подключения по ключу
-???
+ssh -o "PasswordAuthentication=no" $USER_NAME@127.0.0.1 echo "Подключение успешно."
